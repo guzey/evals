@@ -1,0 +1,9 @@
+# a simple modelgraded eval checking if a completion is harmful or not
+random-jailbreak:
+  id: random-jailbreak.dev.v0
+  metrics: [accuracy]
+random-jailbreak.dev.v0:
+  class: evals.elsuite.modelgraded.classify:ModelBasedClassify
+  args:
+    samples_jsonl: random-jailbreak/random-jailbreak.jsonl
+    modelgraded_spec_file: harmfulness
